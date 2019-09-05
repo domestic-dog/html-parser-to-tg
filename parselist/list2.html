@@ -1,0 +1,622 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="area.size" content="width=100%,height=100%">
+    <title>Список терминалов</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/Img/favicon.ico">
+
+    <link href="/bundles/css?v=bsDeM-3Sg1FJ1I8hKX0dzwRzpYT0yWbqydGYxA9ugdo1" rel="stylesheet"/>
+
+    
+    <style>
+        .label {
+            font-size: 16px
+        }
+    </style>
+    <script src="/bundles/js?v=VkiAvFVSPuCX1x_QM_NkEsvY9jTiVn3DWBck53gkzWk1"></script>
+
+</head>
+<body class=''>
+    <div class="navi">
+        <div class="sadmin">
+            <span>VSCC</span>
+            <a class="close_btn" id="close_menu_btn"></a>
+        </div>
+        <a href="/profile/edit/137">
+            <div class="user_avatar" title="Дмитрий Подсытник" style="background-image: url(/img/avatars/33599a97-0bf4-47dc-91f9-0f6bb9dd8fb7..png);"></div>
+            <div class="user">
+                <p class="name">Дмитрий Подсытник</p>
+                <p>viewer</p>
+            </div>
+        </a>
+        <ul class="side_menu">
+                <li><a href="/home/main" class=""><i class="home_page_icon"></i><span>Главная</span></a></li>
+                <li><a href="/finance" class=""><i class="clone_icon"></i><span>Финансы</span></a></li>
+                            <li><a href="/partner/list?page=1&amp;witharchive=false" class=""><i class="link_icon"></i><span>Партнёры</span></a></li>
+                                        <li><a href="/report" class=""><i class="book_icon"></i><span>Отчёты</span></a></li>
+                            <li><a href="/terminal/terminallist" class="active"><i class="desktop_icon"></i><span>Терминалы</span></a></li>
+                <li><a href="/store" class=""><i class="shopping_bag_icon"></i><span>Склад</span></a></li>
+                <li><a href="/collect" class=""><i class="coins_icon"></i><span>Инкассация</span></a></li>
+                            <li><a href="/player" class=""><i class="users_icon"></i><span>Игроки</span></a></li>
+                <li><a href="/profile/list" class=""><i class="user_icon"></i><span>Пользователи</span></a></li>
+                <li><a href="/video" class=""><i class="video_icon"></i><span>Видеонаблюдение</span></a></li>
+                            <li><a href="/utilization?page=1&amp;partner=0&amp;game=0&amp;draw=0" class=""><i class="trash_icon"></i><span>Утилизация</span></a></li>
+            <li><a href="/profile/edit/137" class=""><i class="user_check_icon"></i><span>Профайл</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="top">
+            <a class="icon menu_icon" id="menu_btn"></a>
+            <a class="icon fullscreen_icon" id="fullscreen_btn"></a>
+            <div class="exit pull-right">
+                <a href="/profile/edit/137">
+                    <p class="name">Дмитрий Подсытник</p>
+                    <div class="user_avatar small" style="background-image: url(/img/avatars/33599a97-0bf4-47dc-91f9-0f6bb9dd8fb7..png)"></div>
+                </a>
+                <a href="/login/Logout">Выход</a>
+            </div>
+        </div>
+        
+
+
+
+<div class="title_block">
+    <h1 class="page_title"><i class="page_icon desktop_icon"></i> Список терминалов</h1>
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">Домой</a>
+        </li>
+        <li class="active">Список терминалов</li>
+    </ol>
+</div>
+<div class="container">
+    <div class="bigwhite_block table_partner">
+        <h2>Терминалы</h2>
+        <form role="search" id="form">
+            <input type="hidden" value="all" name="status" />
+            <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="Agent">Агент:</label>
+                            <select class="form-control" id="agent" name="agent" onchange="this.form.submit()">
+                                <option value="">- Все -</option>
+                                    <option value="9" >Индивидуальный предприниматель Байрахтарян Артем Григорьевич</option>
+                                    <option value="12" >Индивидуальный предприниматель Ромов Владимир Анатольевич</option>
+                                    <option value="13" >Индивидуальный предприниматель Витов Дмитрий Викторович</option>
+                                    <option value="14" >Индивидуальный предприниматель Речицкий Михаил Михайлович</option>
+                                    <option value="15" >Индивидуальный предприниматель Девлетшаев Тимур Данирович</option>
+                                    <option value="21" >Индивидуальный предприниматель Шелепа Игорь Александрович</option>
+                                    <option value="22" >Индивидуальный предприниматель Кожеватов Сергей Викторович</option>
+                                    <option value="23" >Индивидуальный предприниматель Бончан Игорь Владимирович</option>
+                                    <option value="26" >Общество с ограниченной ответственностью &#171;Лото-Сервис&#187;</option>
+                                    <option value="27" >Индивидуальный предприниматель Овезов Кирилл Маликович</option>
+                                    <option value="28" >Индивидуальный предприниматель Остапенко Илья Владимирович</option>
+                                    <option value="29" >Индивидуальный предприниматель Ненашев Алексей Сергеевич</option>
+                                    <option value="30" >Общество с ограниченной ответственностью &#171;Лото Маркет&#187;</option>
+                                    <option value="31" >Индивидуальный предприниматель Ляшков Илья Алексеевич</option>
+                                    <option value="33" >Индивидуальный предприниматель Хмелюк Елена Николаевна</option>
+                                    <option value="34" >Общество с ограниченной ответственностью &#171;ПРОСПОРТ&#187; </option>
+                                    <option value="35" >Индивидуальный предприниматель Акуличева Елена Львовна</option>
+                                    <option value="36" >Общество с ограниченной ответственностью &quot;Золотой шпиль&quot;</option>
+                                    <option value="37" >Индивидуальный предприниматель Андриянов Олег Николаевич</option>
+                                    <option value="38" >Индивидуальный предприниматель Аннин Дмитрий Владимирович</option>
+                                    <option value="39" >Индивидуальный Предприниматель Потапов Максим Васильевич</option>
+                                    <option value="40" >Общество с ограниченной ответственностью &quot;Пассаж&quot;</option>
+                                    <option value="41" >Общество с ограниченной ответственностью &#171;Комплат&#187; </option>
+                                    <option value="42" >Общество с ограниченной ответственностью &#171;Здоровье нации&#187;</option>
+                                    <option value="43" >Индивидуальный предприниматель Мусин Ильдар Рафаилович</option>
+                                    <option value="44" >Общество с Ограниченной Ответственностью &#171;Дональд Трейд Плюс&#187;</option>
+                                    <option value="45" >Индивидуальный Предприниматель Рыжков Юрий Алексеевич</option>
+                                    <option value="46" >Индивидуальный предприниматель Балябин Максим Владимирович</option>
+                                    <option value="47" >Индивидуальный предприниматель Кульмяев Игорь Евгеньевич</option>
+                                    <option value="48" >Общество с ограниченной ответственностью &#171;Медальон удачи&#187;</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <label for="filter">Поисковый текст:</label>
+                    <div class="input-group" id="form_submit">
+                        <input id="filter" name="filter" value="" type="text" class="form-control" placeholder="Поиск" />
+                        <span class="input-group-addon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                    <div class="col-xs-12 col-sm-6 text-right">
+                        <p>&nbsp;</p>
+                        <a href="/terminal/edit/" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+            </div>
+        </form>
+        <div class="tabs typecard">
+            <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#" onclick="document.location = '/terminal/terminallist?pagenumber=1&amp;status=all'" aria-expanded="true">Все</a>
+                        </li>
+                        <li>
+                            <a id="tabOnline" data-toggle="tab" href="#" onclick="document.location = '/terminal/terminallist?pagenumber=1&amp;status=online'">Online</a>
+                        </li>
+                        <li>
+                            <a id="tabOffline" data-toggle="tab" href="#" onclick="document.location = '/terminal/terminallist?pagenumber=1&amp;status=offline'">Offline</a>
+                        </li>
+                        <li>
+                            <a id="tabArchive" data-toggle="tab" href="#" onclick="document.location = '/terminal/terminallist?pagenumber=1&amp;status=archive'">Архивные</a>
+                        </li>
+            </ul>
+            <div class="tab-content">
+                <div id="panel_1" class="tab-pane active">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Название терминала</th>
+                                    <th>Владелец</th>
+                                    <th>Учётный номер</th>
+                                    <th>Адрес</th>
+                                    <th>Версия ПО</th>
+                                    <th>Период активности</th>
+                                    <th>Сумма продаж</th>
+                                    <th>Статус</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>67</td>
+                                        <td>Офис</td>
+                                        <td>ИП Байрахтарян А.Г.</td>
+                                        <td></td>
+                                        <td>Авилон</td>
+                                        <td></td>
+                                        <td>13 д, 21 ч, 48 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/67" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/67" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>87</td>
+                                        <td>Аэроэкспресс Шереметьево</td>
+                                        <td>ИП Байрахтарян А.Г.</td>
+                                        <td></td>
+                                        <td>г. Химки, аэропорт Шереметьево, пом.3</td>
+                                        <td></td>
+                                        <td>2 д, 15 ч, 6 м, 39 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/87" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/87" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>88</td>
+                                        <td>Эсфор 1</td>
+                                        <td>ИП Байрахтарян А.Г.</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>3 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/88" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/88" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>89</td>
+                                        <td>Эсфор 2</td>
+                                        <td>ИП Байрахтарян А.Г.</td>
+                                        <td></td>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td>3 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/89" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/89" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>145</td>
+                                        <td>Офис-тест (мини)</td>
+                                        <td>ИП Байрахтарян А.Г.</td>
+                                        <td></td>
+                                        <td>г. Москва, Волгоградский пр-кт, д. 43, корп. 3</td>
+                                        <td></td>
+                                        <td>3 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/145" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/145" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>ТЦ &quot;Шамса&quot;</td>
+                                        <td>ИП Ромов Владимир Анатольевич</td>
+                                        <td></td>
+                                        <td>г.Петропавловск-Камчатский, ул.Тушканова 37</td>
+                                        <td></td>
+                                        <td>65 д, 6 ч, 33 м, 23 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/34" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/34" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>69</td>
+                                        <td>ТЦ &quot;Планета&quot;</td>
+                                        <td>ИП Ромов Владимир Анатольевич</td>
+                                        <td></td>
+                                        <td>г. Петропавловск-Камчатский, ул. Лукашевского, д. 5</td>
+                                        <td></td>
+                                        <td>65 д, 5 ч, 18 м, 24 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/69" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/69" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>39</td>
+                                        <td>ТЦ Браво-Сити</td>
+                                        <td>ИП Витов Д.В.</td>
+                                        <td></td>
+                                        <td>г. Тамбов, ул. Мичуринская, 211</td>
+                                        <td></td>
+                                        <td>2 д, 23 ч, 26 м, 9 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/39" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/39" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>ТЦ &quot;Ашан&quot;</td>
+                                        <td>ИП Витов Д.В.</td>
+                                        <td></td>
+                                        <td>г. Тамбов, ул. Советская, д. 194 б</td>
+                                        <td></td>
+                                        <td>2 д, 23 ч, 24 м, 55 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/40" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/40" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>38</td>
+                                        <td>ТЦ &quot;Orange&quot;</td>
+                                        <td>ИП Речицкий М.М.</td>
+                                        <td></td>
+                                        <td>г Иркутск, ул. Волжская, д. 15</td>
+                                        <td></td>
+                                        <td>2 д, 23 ч, 26 м, 9 с</td>
+                                        <td>155 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/38" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/38" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>143</td>
+                                        <td>МУП Рынок</td>
+                                        <td>ИП Речицкий М.М.</td>
+                                        <td></td>
+                                        <td>г Иркутск, ул. Чехова 22</td>
+                                        <td></td>
+                                        <td>3 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/143" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/143" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>41</td>
+                                        <td>ГМ &quot;Магнит&quot; (Жданова)</td>
+                                        <td>ИП Девлетшаев Т.Д.</td>
+                                        <td></td>
+                                        <td>г.Ростов-на-Дону, ул. Жданова, д. 18</td>
+                                        <td></td>
+                                        <td>3 д, 1 ч, 16 м, 44 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/41" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/41" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>Гипермаркет &#171;Магнит&#187; </td>
+                                        <td>ИП Девлетшаев Т.Д.</td>
+                                        <td></td>
+                                        <td>г. Батайск, ул.Горького, д. 285</td>
+                                        <td></td>
+                                        <td>1 д, 17 ч, 18 м, 39 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/42" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/42" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>55</td>
+                                        <td>ТЦ &#171;Суворовский&#187; </td>
+                                        <td>ИП Девлетшаев Т.Д.</td>
+                                        <td></td>
+                                        <td>г. Ростов-на-Дону, ул. Петренко, д. 1</td>
+                                        <td></td>
+                                        <td>12 ч, 9 м, 23 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/55" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/55" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>56</td>
+                                        <td>Гипермаркет &quot;Магнит Семейный&quot;</td>
+                                        <td>ИП Девлетшаев Т.Д.</td>
+                                        <td></td>
+                                        <td>г. Ростов-на-Дону, ул. Лелюшенко, д. 4</td>
+                                        <td></td>
+                                        <td>12 ч, 14 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">На обслуживании</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/56" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/56" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>ТРЦ &quot;Алмаз&quot;</td>
+                                        <td>ООО &quot;Грин&quot;</td>
+                                        <td></td>
+                                        <td>г. Челябинск, Копейское шоссе, 64</td>
+                                        <td></td>
+                                        <td>121 д, 11 ч, 18 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/2" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/2" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>ТРК &quot;Урал&quot;</td>
+                                        <td>ООО &quot;Грин&quot;</td>
+                                        <td></td>
+                                        <td>г.Челябинск, ул.Воровского, д.6,</td>
+                                        <td></td>
+                                        <td>121 д, 1 ч, 43 м, 25 с</td>
+                                        <td>0 ₽</td>
+                                        <td>
+                                                <span class="frame red">Не отвечает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/57" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/57" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>ТК  &quot;Янтарь&quot;</td>
+                                        <td>ИП Шелепа И.А.</td>
+                                        <td></td>
+                                        <td>г. Южно-Сахалинск, пр-т Мира, д. 229</td>
+                                        <td></td>
+                                        <td>2 д, 22 ч, 16 м, 16 с</td>
+                                        <td>1&#160;400 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/1" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/1" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>ТРК &quot;Сити Молл&quot;</td>
+                                        <td>ИП Шелепа И.А.</td>
+                                        <td></td>
+                                        <td>г. Южно-Сахалинск, ул. 2-я Центральная, д. 1Б</td>
+                                        <td></td>
+                                        <td>2 д, 5 ч, 1 м, 32 с</td>
+                                        <td>300 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/17" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/17" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>64</td>
+                                        <td>ТРЦ &#171;МегаБерезка”</td>
+                                        <td>ИП Шелепа И.А.</td>
+                                        <td></td>
+                                        <td>г. Южно-Сахалинск, ул. Сахалинская, д. 89</td>
+                                        <td></td>
+                                        <td>2 д, 23 ч, 22 м, 53 с</td>
+                                        <td>550 ₽</td>
+                                        <td>
+                                                <span class="frame green">Работает</span>
+                                        </td>
+                                        <td>
+                                            <a href="/terminal/card/64" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                                <a href="/terminal/edit/64" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="pagination"><li title="Предыдущая страница"><a href="/terminal/terminallist?pagenumber=0">&lt;&lt;</a></li><li title="Предыдущая страница"><a href="/terminal/terminallist?pagenumber=0">&lt;</a></li><li title="1"><a href="/terminal/terminallist?pagenumber=0">1</a></li><li class="active" title="2"><a href="javascript:">2</a></li><li title="3"><a href="/terminal/terminallist?pagenumber=2">3</a></li><li title="4"><a href="/terminal/terminallist?pagenumber=3">4</a></li><li title="5"><a href="/terminal/terminallist?pagenumber=4">5</a></li><li title="Следующая страница"><a href="/terminal/terminallist?pagenumber=2">&gt;</a></li><li title="Следующая страница"><a href="/terminal/terminallist?pagenumber=6">&gt;&gt;</a></li></ul>
+    </div>
+</div>
+
+
+    </div>
+    <div id='ajax_loader' style="position: fixed; left: 50%; top: 50%; display: none;">
+        <img src="/img/preloader.svg" alt="Preloader" />
+    </div>
+    <script language="javascript">
+        $(function () {
+            var bootstrapButton = $.fn.button.noConflict();
+            $.fn.bootstrapBtn = bootstrapButton;
+
+            $('#modalClose').modal('hide');
+        });
+
+        $(document).ajaxError(function (event, jqxhr, settings, exception) {
+            if (jqxhr.status == 401) {
+                window.location.href = '/login';
+            }
+            else {
+                alertError(jqxhr.responseJSON.error);
+            }      
+        });
+
+        jQuery(function ($) {
+            $(document)
+                .ajaxStop(function () {
+                    $("#ajax_loader").hide();
+                });
+            $(document)
+                .ajaxStart(function () {
+                    $("#ajax_loader").show();
+                });
+        });
+
+        function eventFire(el, etype) {
+            if (el.fireEvent) {
+                el.fireEvent('on' + etype);
+            } else {
+                var evObj = document.createEvent('Events');
+                evObj.initEvent(etype, true, false);
+                el.dispatchEvent(evObj);
+            }
+        }
+    </script>
+
+
+    
+    <script language="javascript">
+        $(function () {
+            $("#form_submit .input-group-addon").click(function () {
+                $("#form").submit();
+            });
+            $("#form_submit input").change(function () {
+                $("#form").submit();
+            });
+        });
+    </script>
+
+</body>
+</html>
