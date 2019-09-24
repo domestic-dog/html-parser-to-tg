@@ -1,4 +1,21 @@
 #!/usr/bin/env python3
+import psycopg2
+
+conn = psycopg2.connect(dbname='listdb', user='worker')
+cursor = conn.cursor()
+
+
+
+
+
+
+
+
+
+
+
+
+
 file_to_open = "/home/worker/vendingautm/parselist/termlist"
 f = open(file_to_open)
 class Terminal:
@@ -18,11 +35,18 @@ adress = 3
 uptime = 4
 money = 5
 status = 6
+file = open('./temp.txt', 'w')
 result =f.read().splitlines()
 #for i in range(112):
 while result: 
    # print(result[id] + result[status])
-    str= Terminal(result[id],result[term_name],result[agent],result[adress],result[uptime],result[money],result[status])
+    str = Terminal(result[id],result[term_name],result[agent],result[adress],result[uptime],result[money],result[status])
     id+= 7
     status+= 7
-    print(str.id + str.status)
+    term_name+=7
+    agent+=7
+    uptime+=7
+    money+=7
+    adress+=7
+    file.write(str.id+ str.term_name+ str.agent + str.status + '\n')
+    print(str.__dict__)
