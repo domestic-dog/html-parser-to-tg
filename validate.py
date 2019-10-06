@@ -14,7 +14,7 @@ d
 e = open('/home/worker/vendingautm/status.txt', 'w').close()
 e
 
-subprocess.call("/home/worker/vendingautm/parselist/parse.sh")
+subprocess.call("/home/worker/vendingautm/parse.sh")
 
 #_________get cvs
 
