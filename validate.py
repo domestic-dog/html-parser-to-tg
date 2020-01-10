@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import subprocess
 import csv
-
+import os
+import config
 data = {}
 
 with open('/home/worker/vendingautm/temp.csv','r') as fin:
@@ -14,13 +14,13 @@ d
 e = open('/home/worker/vendingautm/status.txt', 'w').close()
 e
 
-subprocess.call("/home/worker/vendingautm/parse.sh")
+os.system("/home/worker/vendingautm/getlist.py")
 
 #_________get cvs
 
 
 #openfile
-file_to_open = "/home/worker/vendingautm/termlist"
+file_to_open = "/home/worker/vendingautm/finally"
 f = open(file_to_open, 'r' )
 
 id = 0
@@ -39,6 +39,7 @@ while  result :
         #print(result[id] + result[status])
         file.write(result[id].lstrip() +',' + result[status].lstrip()  + '\n' )
         newdata[result[id].lstrip()] =result[status].lstrip() 
+        #print(result[id].lstrip() +','+ result[term_name].lstrip() +','+ result[agent].lstrip())
         id+=7
         status+= 7
         term_name+=7
@@ -55,4 +56,4 @@ while  result :
 for i in data:
     if data[i] != newdata[i]:
         sfile.write('Terminal: '+ i + ' ' + data[i] + ' -> ' + newdata[i] + '\n')
-
+         

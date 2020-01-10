@@ -2,31 +2,34 @@
 import threading, sys
 import time
 import telebot
+import hashlib
 import os
-bot = telebot.TeleBot("714857420:AAEvUuGHl2LvwABea8QAQfy6_trR_ZUmPnc")
+bot = telebot.TeleBot("714857420:AAEvUuGHl2LvwABea8QAQfy6_trR_ZUmPnc") #token
 
 
-@bot.message_handler(commands=['help', 'start'])
-def send_welcome(message):
-    msg = bot.send_message(message.chat.id, 'Представьтесь, пожалуйста')
-#@bot.message_handler(commands=['check'])
-#def send_check(message):
-#    if trf != True:
-#        msg = bot.send_message(message.chat.id, a, reply_markup=keyboard1) 
-#    else:
-#        msg = bot.send_message(message.chat.id, 'Все живы',reply_markup=keyboard1)
 
-#keyboard1 = telebot.types.ReplyKeyboardMarkup(True)
-#keyboard1.row('/check')
+
+
+
 
 
 def getStatus():
-    threading.Timer(180, getStatus).start()
-    trf = os.stat('/home/worker/vendingautm/status.txt').st_size == 0
-    f = open('/home/worker/vendingautm/status.txt','r')
-    a = f.read()
-    if trf != True:
-        bot.send_message('716082919', a)    
+    threading.Timer(10, getStatus).start()
+    сhecksize = os.stat('/home/worker/vendingautm/status.txt').st_size == 0
+    openstatus = open('/home/worker/vendingautm/status.txt','r')
+    readstatus = openstatus.read()
+    hashstat= hashlib.md5(open('/home/worker/vendingautm/status.txt','rb').read()).hexdigest()
+    readtemp = open('/home/worker/vendingautm/bot/temp.txt','r')
+    hashtemp = hashlib.md5(open('/home/worker/vendingautm/bot/temp.txt','rb').read()).hexdigest()
+    if сhecksize != True  and  hashtemp != hashstat:
+#MESSAGES
+        bot.send_message('589711771', readstatus)
+        bot.send_message('266818872', readstatus)
+        opentem = open('/home/worker/vendingautm/bot/temp.txt','w').close
+        opentemp = open('/home/worker/vendingautm/bot/temp.txt','w')
+        writetemp = opentemp.write(readstatus)    
+        #FUCK TERMINAL SECTION
+        #subprocess.call("sed -i '/75/d' /home/worker/vendingautm/status.txt", shell=True)
 getStatus()        
 
 bot.polling(none_stop=True, interval=0)
