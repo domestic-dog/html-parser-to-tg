@@ -20,7 +20,7 @@ headers = {'Content-type':'application/json'}
 req = begin.post(url, json = data, headers=headers)
 print(req.text)
 i = 0
-f = open('finally', 'w')
+f = open('/home/worker/vendingautm/finally', 'w')
 f.write("")
 f.close
 
@@ -39,10 +39,10 @@ while i!=config.pages:
         td.find_all('td')
     all_text = ''.join(final.findAll(text=True))
     r = str(all_text)
-    file =  open('finally', 'a')
+    file =  open('/home/worker/vendingautm/finally', 'a')
     file.write(r)    
     file.close()
     i+=1
 
-os.system("sed -i '/^$/d' ./finally ")
+os.system("sed -i '/^$/d' /home/worker/vendingautm/finally ")
 
