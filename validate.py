@@ -37,8 +37,8 @@ result =f.read().splitlines()
 while  result :
     try:
         #print(result[id] + result[status])
-        file.write(result[id].lstrip() +',' + result[status].lstrip()  + '\n' )
-        newdata[result[id].lstrip()] =result[status].lstrip() 
+        file.write(result[id].lstrip() +',' + result[status].lstrip()  + ',' + result[money].lstrip().replace(' ₽','') + '\n' )
+        newdata[result[id].lstrip()] = result[status].lstrip() 
         #print(result[id].lstrip() +','+ result[term_name].lstrip() +','+ result[agent].lstrip())
         id+=7
         status+= 7
@@ -57,3 +57,6 @@ for i in data:
     if data[i] != newdata[i]:
         sfile.write('Terminal: '+ i + ' ' + data[i] + ' -> ' + newdata[i] + '\n')
          
+
+
+

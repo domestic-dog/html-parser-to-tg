@@ -3,16 +3,34 @@ import threading, sys
 import time
 import telebot
 import hashlib
+import csv
 import os
 bot = telebot.TeleBot("714857420:AAEvUuGHl2LvwABea8QAQfy6_trR_ZUmPnc") #token
+data = {}
+xs = ''
+
+with open('/home/worker/vendingautm/temp.csv','r') as fin:
+        reader=csv.reader(fin, skipinitialspace=True, quotechar="'")
+        for row in reader:
+            data[int(row[0])] = str(row[1]), int(row[2].replace('\xa0',''))
+def getzeroTerminals(data):
+    xs = 'Нулевые терминалы:' + '\n'
+    for i in data:
+        try:
+            if str(data[i][0]) == 'Работает' and data[i][1] == 0:
+                xs += 'Terminal: ' + str(i) + '\n'
+        except KeyError:
+            continue
+    return xs
 
 
 
 
 
-
-
-
+@bot.message_handler(commands=['report'])
+def send_something(message):
+    bot.send_message('589711771', getzeroTerminals(data))
+    bot.send_message('266818872', getzeroTerminals(data))
 def getStatus():
     threading.Timer(10, getStatus).start()
     сhecksize = os.stat('/home/worker/vendingautm/status.txt').st_size == 0
