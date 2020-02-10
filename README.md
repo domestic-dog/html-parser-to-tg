@@ -1,4 +1,4 @@
-**Install  vendingAutmBot**
+<h1>Install  vendingAutmBot</h1>
 1. Создать пользователя worker
 2. Скопировать репозиторий  git clone https://descer@bitbucket.org/descer/vendingautm.git
 3. Добавить в кронтаб абсолютный путь до ./validate.py
