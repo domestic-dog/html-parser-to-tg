@@ -5,7 +5,7 @@
 4. Поставить неоходимые либы
 	pip install csv
 	pip install subprocess
-	pip install telebot
+	pip install telebot 
 	pip install hashlib
 	pip install os
 	pip install threading, sys
