@@ -1,15 +1,15 @@
-**Install  vendingAutmBot**
-1. Создать пользователя worker
-2. Скопировать репозиторий  git clone https://descer@bitbucket.org/descer/vendingautm.git
-3. Добавить в кронтаб абсолютный путь до ./validate.py
-4. Поставить неоходимые либы
-	pip install csv
-	pip install subprocess
-	pip install telebot
-	pip install hashlib
-	pip install os
-	pip install threading, sys
-	pip install BeautifulSoup
-	pip install config
-	pip install  requests
-5.Создать демон бота и добавить в автозагрузку. 
+<h1>Install  vendingAutmBot</h1>
+<p>1. Создать пользователя worker</p>
+<p>2. Скопировать репозиторий  git clone https://descer@bitbucket.org/descer/vendingautm.git</p>
+<p>3. Добавить в кронтаб абсолютный путь до ./validate.py</p>
+<p>4. Поставить неоходимые либы</p>
+<p>	pip install csv</p>
+<p>	pip install subprocess</p>
+<p>	pip install telebot </p>
+<p>	pip install hashlib</p>
+<p>	pip install os</p>
+<p>	pip install threading, sys</p>
+<p>	pip install BeautifulSoup</p>
+<p>	pip install config</p>
+<p>	pip install  requests</p>
+<p>5.Создать демон бота и добавить в автозагрузку. </p>
