@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import re
 
 
-data = {'login':'d.podsytnik', 'password':'81dc9bdb52d04dc20036dbd8313ed055'}
+data = {'login':config.user, 'password':config.password}
 
 begin = requests.Session()
 headers = {'Content-type':'application/json'}

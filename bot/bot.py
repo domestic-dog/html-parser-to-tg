@@ -11,14 +11,21 @@ data = {}
 
 def get_status():
     os.system("/home/worker/vendingautm/send_zeroReport.py")
-    catStatus =  open('/home/worker/vendingautm/zeroStatus.txt', 'r').read()
-    return catStatus
+    catStatus =  open('/home/worker/vendingautm/zeroStatus.txt', 'r')
+    catStatusx = catStatus.read()
+    catStatus.close()
+    return catStatusx
 
 @bot.message_handler(commands=['report'])
 def send_something(message):
-    bot.send_message('589711771', get_status())
-    bot.send_message('266818872', get_status())
-
+    threading.Timer(10, get_status).start()
+    try:
+        bot.send_message('589711771', get_status())
+        bot.send_message('266818872', get_status())
+    except (ConnectionAbortedError, ConnectionResetError, ConnectionRefusedError, ConnectionError):
+        time.sleep(5)
+        bot.send_message('589711771', get_status())
+        bot.send_message('266818872', get_status())
 
 def getStatus():
     threading.Timer(10, getStatus).start()
@@ -39,4 +46,4 @@ def getStatus():
         #subprocess.call("sed -i '/75/d' /home/worker/vendingautm/status.txt", shell=True)
 getStatus()        
 
-bot.polling(none_stop=True, interval=0)
+bot.polling(none_stop=True, interval=0, timeout=20)
