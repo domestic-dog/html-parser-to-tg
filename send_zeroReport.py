@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import csv
+import time
+import os
 data = {}
-x = ''
+#x = ''
 f = open('/home/worker/vendingautm/zeroStatus.txt', 'w');
 with open('/home/worker/vendingautm/temp.csv','r') as fin:
         reader=csv.reader(fin, skipinitialspace=True, quotechar="'")

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import sys
 import csv
-import lunh
+import luhn
+
+
 #ARGS
 
 firstticket = sys.argv[1]
@@ -11,9 +13,9 @@ lastticet = sys.argv[2]
 
 #MAIN FUNCTION
 
-def calcsql(first,last):
-    lens = len((first))
-    lens2 = len((last))
+def calcsql(first_source,last_source):
+    lens = len((first_source,last_source))
+    lens2 = len((last_source))
     if lens == 16 and lens2 == 16 and check_numbers(firstticket,lastticet) == True:
         print('Тип билета: Моментальный')
         print('Тип игры ' +  bet_type(first,7))
