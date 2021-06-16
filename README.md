@@ -1,6 +1,5 @@
 <h1>Install  vendingAutmBot</h1>
 <p>1. Создать пользователя worker</p>
-<p>2. Скопировать репозиторий  git clone https://descer@bitbucket.org/descer/vendingautm.git</p>
 <p>3. Добавить в кронтаб абсолютный путь до ./validate.py</p>
 <p>4. Поставить неоходимые либы</p>
 <p>	pip install csv</p>
